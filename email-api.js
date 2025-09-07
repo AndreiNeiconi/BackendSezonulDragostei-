@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Endpoint to receive form submissions
-app.post("/conatact", async (req, res) => {
+app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
