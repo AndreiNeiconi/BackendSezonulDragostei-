@@ -82,7 +82,13 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://velvety-manatee-071626.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 
 // Configure multer for file uploads (memory storage)
