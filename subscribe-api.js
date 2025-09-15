@@ -110,7 +110,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // ===== /contact endpoint (simple contact form) =====
-app.post("/contact", async (req, res) => {
+app.post("api/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -140,7 +140,7 @@ Message: ${message}
 });
 
 // ===== /subscribe endpoint (form with file upload) =====
-app.post("/subscribe", upload.single("file"), async (req, res) => {
+app.post("/api/subscribe", upload.single("file"), async (req, res) => {
   try {
     const { name, surname, email, phone, sex, age, job, location, details } =
       req.body;
