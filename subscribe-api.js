@@ -79,7 +79,7 @@ const multer = require("multer");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 6060;
 
 // Middleware
 app.use(
