@@ -82,6 +82,17 @@ const app = express();
 const PORT = process.env.PORT || 6060;
 
 // Middleware
+// app.use(
+//   cors({
+//     origin: [
+//       "https://serviciidematrimoniale.ro",
+//       "https://www.serviciidematrimoniale.ro",
+//     ],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
     origin: [
@@ -92,7 +103,6 @@ app.use(
     credentials: true,
   })
 );
-
 app.use(bodyParser.json());
 
 // Configure multer for file uploads (memory storage)
